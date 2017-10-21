@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- 声明文档类型 -->
+<html lang="zh-cn">
+<!-- 声明文档语言区域 -->
+<head>
+<!-- 文档头部 -->
+<meta charset="utf-8">
+<!-- 字符集定义，UTF-8是国际通用的字符集编码格式 -->
+<title>Mobile-无标题文档</title>
+<!-- 网页头部标题 -->
+<meta name="keywords" content=""/>
+<!-- 网站搜索关键词 -->
+<meta name="description" content=""/>
+<!-- 页面文档描述 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<!-- 定义虚拟视窗宽度为设备宽度，视窗初始比例1:1，视窗最大比例1，不允许用户缩放视图。 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<!-- 设定ios默认浏览器safari的地址栏皮肤为默认风格 -->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!-- 设置网站"添加到主屏幕"后，通过主屏幕图标进入网站，隐藏safari地址栏和菜单栏，全屏显示 -->
+<meta name="format-detection" content="telephone=no" />
+<!-- 设置关闭ios系统自带的号码串生成拨号功能 -->
+<meta name="apple-itunes-app" content="app-id= 627887505 ">
+<!-- 如果有和移动网站对应的苹果App,  在content中添加AppID，会在移动网站顶部出现下载APP的提示浮层 -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="">
+<!-- "添加到主屏幕"用icon -->
+<link rel="icon" href="" type="image/x-icon" />
+<!-- 链入地址栏图标 -->
+    <script>
+        !function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
+    </script>
+</head>
+
+<body ontouchmove="event.preventDefault();">
+<div class="screen">
+    <div class="wrapper p1 current" data-maxstep=1>
+        <div class="bg">
+            <img src="../images/p1-bg.jpg">
+            <img class="txt" src="../images/p1-txt.png">
+        </div>
+        <div class="logo">
+            <img src="../images/p1-logo.png">
+        </div>
+    </div>
+    <div class="page p2" data-maxstep=8>
+        <img class="bg" src="../images/p2-bg.jpg">
+        <div class="box box1">
+            <img src="../images/p2-txt-box1.jpg">
+            <img class="txt txt1" src="../images/p2-txt1.png">
+            <img class="txt txt2" src="../images/p2-txt2.png">
+            <img class="txt txt3" src="../images/p2-txt3.png">
+        </div>
+        <div class="box box2">
+            <img src="../images/p2-txt-box2.jpg">
+            <img class="txt txt1" src="../images/p2-box2-txt1.png">
+            <img class="txt txt2" src="../images/p2-box2-txt2.png">
+        </div>
+    </div>
+    <div class="page p3"  data-maxstep=3>
+        <img class="bg" src="../images/p3-bg.jpg">
+        <div class="box">
+            <img src="../images/p3-box.jpg">
+            <img class="txt" src="../images/p3-txt.png">
+        </div>
+    </div>
+    <div class="page p4"  data-maxstep=7>
+        <img class="bg" src="../images/p4-bg.jpg">
+        <img class="txt1" src="../images/p4-txt1.png">
+        <img class="txt2" src="../images/p4-txt2.png">
+        <img class="pho" src="../images/p4-pho.jpg">
+        <img class="info" src="../images/p4-info.jpg">
+        <div class="b">
+            <img class="i1" src="../images/p4-tl.jpg">
+            <img class="i2" src="../images/p4-tr.jpg">
+            <img class="i3" src="../images/p4-bl.jpg">
+            <img class="i4" src="../images/p4-br.jpg">
+            <img class="pop" src="../images/p4-pop.png">
+        </div>
+    </div>
+    <div class="page p14"  data-maxstep=9>
+        <section class="s1">
+            <img src="../images/p14-1.jpg" alt="">
+        </section>
+        <section class="s2">
+            <img src="../images/p14-txt-1.png" alt="">
+            <img src="../images/p14-txt-2.png" alt="">
+            <img src="../images/p14-txt-3.png" alt="">
+            <img src="../images/p14-txt-4.png" alt="">
+        </section>
+        <section class="s3">
+            <img src="../images/p14-2.jpg" alt="">
+            <img src="../images/p14-txt-5.png" alt="">
+        </section>
+        <section class="s4">
+            <img src="../images/p14-txt-6.png" alt="">
+        </section>
+        <section class="s5">
+            <img src="../images/p14-3.jpg" alt="">
+            <img src="../images/p14-txt-7.png" alt="">
+        </section>
+        <section class="s6">
+            <img src="../images/p14-txt-8.png" alt="">
+        </section>
+        <section class="s7">
+            <img src="../images/p14-4.jpg" alt="">
+            <img src="../images/p14-txt-9.png" alt="">
+        </section>
+        <section class="s8">
+            <img src="../images/p14-txt-10.png" alt="">
+        </section>
+        <section class="s9">
+            <img src="../images/p14-txt-11.png" alt="">
+        </section>
+    </div>
+    <div class="page p15"  data-maxstep=7>
+        <section class="s1">
+            <img src="../images/p15-1.jpg" alt="">
+            <img src="../images/p15-2.jpg" alt="">
+            <img src="../images/p15-txt-1.png" alt="">
+            <img src="../images/p15-txt-2.png" alt="">
+            <img src="../images/p15-txt-3.png" alt="">
+        </section>
+        <section class="s2">
+            <img src="../images/p15-3.jpg" alt="">
+            <img src="../images/p15-txt-4.png" alt="">
+        </section>
+        <section class="s3">
+            <img src="../images/p15-txt-5.png" alt="">
+            <img src="../images/p15-4.jpg" alt="">
+        </section>
+        <section class="s4">
+            <img src="../images/p15-txt-6.png" alt="">
+            <img src="../images/p15-5.jpg" alt="">
+        </section>
+        <section class="s5">
+            <img src="../images/p15-txt-7.png" alt="">
+            <img src="../images/p15-6.jpg" alt="">
+        </section>
+        <section class="s6">
+            <img src="../images/p15-7.jpg" alt="">
+            <img src="../images/p15-8.jpg" alt="">
+            <img src="../images/p15-txt-9.png" alt="">
+        </section>
+        <section class="s7">
+            <img src="../images/p15-txt-8.png" alt="">
+        </section>
+    </div>
+    <header id="header"><img src="../images/header.png"></header>
+</div>
+</body>
+</html>

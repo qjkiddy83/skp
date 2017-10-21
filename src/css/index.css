@@ -1,0 +1,347 @@
+@import 'reset-mobile';
+@import 'base';
+@import 'animate';
+
+$dur: 0.5s;
+
+header{
+	display: block;
+}
+
+@-webkit-keyframes p14 {
+	from { 
+		top: 1.64557rem;
+		left: -4.227848rem;
+		height:13.544304rem;
+		width: 20.329114rem;
+	}
+	to { 
+		top: 1.658228rem;
+		left: 0.56962rem;
+		height:5.797468rem;
+		width: 8.860759rem;
+	}
+}
+.p14{
+	img{
+		opacity: 0;
+	}
+	&.step1{
+		.s1 img{
+			position: absolute;
+			&:nth-child(1){
+				height:13.544304rem;
+				width: 20.329114rem;
+				top: 1.64557rem;
+				left: -4.227848rem;
+				animation: fadeInUp $dur .5s forwards;
+			}
+		}
+	}
+	&.step2{
+		.s1 img{
+			position: absolute;
+			&:nth-child(1){
+				opacity:1;
+				top: 1.64557rem;
+				left: -4.227848rem;
+				height:13.544304rem;
+				width: 20.329114rem;
+				animation: p14 $dur .5s forwards;
+			}
+		}
+		.s2 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.898734rem;
+				top: 8.835443rem;
+				left: 0.556962rem;
+				animation: fadeInUp $dur $dur*1+0.5s forwards;
+			}
+			&:nth-child(2){
+				width:5.987342rem;
+				top: 10.455696rem;
+				left: 2.050633rem;
+				animation: fadeInUp $dur $dur*2+0.5s forwards;
+			}
+			&:nth-child(3){
+				width:5.405063rem;
+				top: 11.544304rem;
+				left: 2.291139rem;
+				animation: fadeInUp $dur $dur*3+0.5s forwards;
+			}
+			&:nth-child(4){
+				width:2.164557rem;
+				top: 14.265823rem;
+				left: 3.835443rem;
+				animation: fadeInUp $dur $dur*4+0.5s forwards;
+			}
+		}
+	}
+
+	&.step3,&.step4{
+		.s3 img{
+			position: absolute;
+			&:nth-child(1){
+				width:3.810127rem;
+				top: 1.632911rem;
+				left: 0.670886rem;
+				animation: fadeInLeft $dur 0.5s forwards;
+			}
+			
+		}
+	}
+	&.step3{
+		.s3 img{
+			&:nth-child(2){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeInUp $dur $dur*1+0.5s forwards;
+			}
+		}
+	}
+	&.step4{
+		.s4 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeInUp $dur .5s forwards;
+			}
+			
+		}
+	}
+
+	&.step5,&.step6{
+		.s5 img{
+			position: absolute;
+			&:nth-child(1){
+				width:3.810127rem;
+				top: 1.632911rem;
+				left: 0.670886rem;
+				animation: fadeInLeft $dur 0.5s forwards;
+			}
+			
+		}
+	}
+	&.step5{
+		.s5 img{
+			&:nth-child(2){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeInUp $dur $dur*1+0.5s forwards;
+			}
+		}
+	}
+	&.step6{
+		.s6 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeInUp $dur .5s forwards;
+			}
+			
+		}
+	}
+	&.step7,&.step8,&.step9{
+		.s7 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.037975rem;
+				top: 1.64557rem;
+				left: 0.974684rem;
+				animation: fadeInLeft $dur .5s forwards;
+			}
+		}
+	}
+	&.step7{
+		.s7 img{
+			&:nth-child(2){
+				width:8.025316rem;
+				top: 9.721519rem;
+				left: 0.987342rem;
+				animation: fadeInUp $dur $dur*1+0.5s forwards;
+			}
+		}
+	}
+	&.step8{
+		.s8 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.025316rem;
+				top: 9.721519rem;
+				left: 0.987342rem;
+				animation: fadeInUp $dur 0.5s forwards;
+			}
+		}
+	}
+	&.step9{
+		.s9 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.025316rem;
+				top: 9.721519rem;
+				left: 0.987342rem;
+				animation: fadeInUp $dur 0.5s forwards;
+			}
+		}
+	}
+}
+.p15{
+	img{
+		opacity: 0;
+	}
+	&.step1{
+		.s1 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.860759rem;
+				top: 1.64557rem;
+				left: 0.56962rem;
+				animation: fadeInLeft $dur .5s forwards;
+			}
+			&:nth-child(2){
+				width:3.974684rem;
+				top: 8.367089rem;
+				left: 0.56962rem;
+				animation: fadeInLeft $dur $dur*1+0.5s forwards;
+			}
+			&:nth-child(3){
+				width:4.531646rem;
+				top: 8.367089rem;
+				left: 4.911392rem;
+				animation: fadeInUp $dur $dur*2+0.5s forwards;
+			}
+			&:nth-child(4){
+				width:2.341772rem;
+				top: 11.075949rem;
+				left: 7.037975rem;
+				animation: fadeInUp $dur $dur*3+0.5s forwards;
+			}
+			&:nth-child(5){
+				width:4.531646rem;
+				top: 11.860759rem;
+				left: 4.860759rem;
+				animation: fadeInUp $dur $dur*4+0.5s forwards;
+			}
+		}
+	}
+	&.step2{
+		.s2 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.075949rem;
+				top: 1.632911rem;
+				left: 0.962025rem;
+				animation: fadeInRight $dur .5s forwards;
+			}
+			&:nth-child(2){
+				width:8.088608rem;
+				top: 7.911392rem;
+				left: 0.822785rem;
+				animation: fadeInRight $dur $dur*1+0.5s forwards;
+			}
+			
+		}
+	}
+	&.step3{
+		.s3 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.075949rem;
+				top: 2.303797rem;
+				left: 0.962025rem;
+				animation: fadeInLeft $dur .5s forwards;
+			}
+			&:nth-child(2){
+				width:8.063291rem;
+				top: 8.620253rem;
+				left: 0.974684rem;
+				animation: fadeInRight $dur $dur*1+0.5s forwards;
+			}
+			
+		}
+	}
+	&.step4{
+		.s4 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.101266rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeInLeft $dur $dur*1+0.5s forwards;
+			}
+			&:nth-child(2){
+				width:4.443038rem;
+				top: 2.151899rem;
+				left: 4.987342rem;
+				animation: fadeInLeft $dur .5s forwards;
+			}
+			
+		}
+	}
+	&.step5{
+		.s5 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.101266rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeInRight $dur 0.5s forwards;
+			}
+			&:nth-child(2){
+				width:4.443038rem;
+				top: 2.151899rem;
+				left: 4.987342rem;
+				animation: fadeInRight $dur $dur*1+0.5s forwards;
+			}
+			
+		}
+	}
+	&.step6,&.step7{
+		.s6 img{
+			position: absolute;
+			&:nth-child(1){
+				width:3.924051rem;
+				top: 1.658228rem;
+				left: 1.025316rem;
+				animation: fadeInUp $dur 0.5s forwards;
+			}
+			&:nth-child(2){
+				width:3.924051rem;
+				top: 1.658228rem;
+				left: 5.113924rem;
+				animation: fadeInUp $dur $dur*1+0.5s forwards;
+			}
+			
+		}
+	}
+	&.step6{
+		.s6 img{
+			&:nth-child(3){
+				width:8.063291rem;
+				top: 7.177215rem;
+				left: 0.974684rem;
+				animation: fadeInUp $dur $dur*2+0.5s forwards;
+			}
+			
+		}
+	}
+	&.step7{
+		.s7 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.063291rem;
+				top: 7.177215rem;
+				left: 0.974684rem;
+				animation: fadeInUp $dur .5s forwards;
+			}
+			
+		}
+	}
+}
