@@ -8,7 +8,81 @@ header{
 	display: block;
 }
 
-@-webkit-keyframes p14 {
+.p12{
+	img{
+		opacity: 0;
+	}	
+	&.step1{
+		.s1 img{
+			position: absolute;
+			&:nth-child(1){
+				width:5.316456rem;
+				top: 1.632911rem;
+				left: 0.56962rem;
+				animation: fadeInLeft $dur .5s forwards;
+			}
+			&:nth-child(2){
+				width:4.696203rem;
+				top: 2.78481rem;
+				left: 4.379747rem;
+				animation: fadeInUp $dur $dur*1+.5s forwards;
+			}
+			&:nth-child(3){
+				width:4.481013rem;
+				top: 7.417722rem;
+				left: 4.443038rem;
+				animation: fadeInUp $dur $dur*2+.5s forwards;
+			}
+			&:nth-child(4){
+				width:2.78481rem;
+				top: 8.481013rem;
+				left: 6.012658rem;
+				animation: fadeInUp $dur $dur*3+.5s forwards;
+			}
+			&:nth-child(5){
+				width:3.43038rem;
+				top: 10.860759rem;
+				left: 6.025316rem;
+				animation: fadeIn $dur $dur*4+.5s forwards;
+			}
+		}
+	}
+}
+
+.p13{
+	&.step1,&.step2{
+		padding: 1.64557rem 0.56962rem 0;
+		.s1{
+			position: relative;
+			img{
+				position: absolute;
+				height: 13.0rem;
+				width: 26.189873rem;
+				transition-property: left;
+				transition-duration: $dur*3;
+			}
+		}
+	}
+	&.step1{
+		.s1{
+			img{
+				left: 0;
+			}
+		}
+		&.init .s1 img{
+			animation: fadeInRight $dur forwards;
+		}
+	}
+	&.step2{
+		.s1{
+			img{
+				left: -17.329114rem;
+			}
+		}
+	}
+}
+
+@keyframes p14 {
 	from { 
 		top: 1.64557rem;
 		left: -4.227848rem;
@@ -192,6 +266,7 @@ header{
 		}
 	}
 }
+
 .p15{
 	img{
 		opacity: 0;
@@ -342,6 +417,150 @@ header{
 				animation: fadeInUp $dur .5s forwards;
 			}
 			
+		}
+	}
+}
+
+.p16{
+	img{
+		opacity: 0;
+	}
+	&.step1{
+		.s1 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.64557rem;
+				top: 2.481013rem;
+				left: 0.810127rem;
+				animation: fadeInUp $dur .5s forwards;
+			}
+			&:nth-child(2){
+				width:4.974684rem;
+				top: 5.177215rem;
+				left: 2.56962rem;
+				animation: fadeInUp $dur $dur*1+0.5s forwards;
+			}
+			&:nth-child(3){
+				width:7.392405rem;
+				top: 6.35443rem;
+				left: 1.21519rem;
+				animation: fadeInUp $dur $dur*2+0.5s forwards;
+			}
+			&:nth-child(4){
+				width:8.848101rem;
+				top: 7.21519rem;
+				left: 0.56962rem;
+				animation: fadeInUp $dur $dur*3+0.5s forwards;
+			}
+			&:nth-child(5){
+				width:8.797468rem;
+				top: 13.493671rem;
+				left: 0.582278rem;
+				animation: fadeInUp $dur $dur*4+0.5s forwards;
+			}
+			&:nth-child(6){
+				width:1.835443rem;
+				top: 11.012658rem;
+				left: 7.379747rem;
+				animation: fadeIn $dur $dur*5+0.5s forwards;
+			}
+		}
+	}
+	&.step2,&.step3{
+		.s2{
+			position: absolute;
+			top: 1.64557rem;
+			background: url(../images/p16-bg.jpg) no-repeat;
+			width: 15.303797rem;
+			height: 100%;
+			left: 0;
+			background-size: 100% auto;
+			transition-property: left;
+			transition-duration: $dur;
+			img{
+				position: absolute;
+				&:nth-child(1){
+					width:2.088608rem;
+					top: 0.556962rem;
+					left: 0.189873rem;
+				}
+				&:nth-child(2){
+					width:2.316456rem;
+					top: 7.063291rem;
+					left: 0.189873rem;
+				}
+				&:nth-child(3){
+					width:2.658228rem;
+					top: 7.063291rem;
+					left: 2.632911rem;
+				}
+				&:nth-child(4){
+					width:2.265823rem;
+					top: 0.556962rem;
+					left: 2.455696rem;
+				}
+				&:nth-child(5){
+					width:3.56962rem;
+					top: 0.556962rem;
+					left: 4.860759rem;
+				}
+				&:nth-child(6){
+					width:2.202532rem;
+					top: 7.063291rem;
+					left: 5.417722rem;
+				}
+				&:nth-child(7){
+					width:2.202532rem;
+					top: 7.063291rem;
+					left: 7.746835rem;
+				}
+				&:nth-child(8){
+					width:2.481013rem;
+					top: 0.556962rem;
+					left: 8.607595rem;
+				}
+				&:nth-child(9){
+					width:2.620253rem;
+					top: 7.063291rem;
+					left: 10.088608rem;
+				}
+				&:nth-child(10){
+					width:3.772152rem;
+					top: 0.556962rem;
+					left: 11.278481rem;
+				}
+				&:nth-child(11){
+					width:2.21519rem;
+					top: 7.063291rem;
+					left: 12.835443rem;
+				}
+				&:nth-child(12){
+					width:14.582278rem;
+					top: 6.240506rem;
+					left: 0.189873rem;
+				}
+				&:nth-child(13){
+					width:14.253165rem;
+					top: 12.822785rem;
+					left: 0.443038rem;
+				}
+				&:nth-child(14){
+					width:1.506329rem;
+					top: 4.189873rem;
+					left: 5.949367rem;
+				}
+				@for $i from 0 through 13 {
+				  &:nth-child(#{$i+1}){ 
+					animation: fadeIn $dur 0.3*$i+0.5s forwards;
+				  }
+				}
+			}
+			
+		}
+	}
+	&.step3{
+		.s2{
+			left: -5.303797rem;
 		}
 	}
 }
