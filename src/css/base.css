@@ -1,3 +1,4 @@
+.loading,
 .screen,
 .page,
 .wrapper,
@@ -7,6 +8,34 @@
 	height:15.746835rem;
 	overflow:hidden;
 	}
+.loading{
+	background: #fff;
+	z-index: 999;
+}
+.loading img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	width: 2.278481rem;
+	height:2.278481rem;
+}
+.loading .bar{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	width: 1.56962rem;
+	height: 0.101266rem;
+	border: solid 0.025316rem #717171;
+	margin-top: 1.582278rem;
+	border-radius: 0.037975rem;
+}
+.loading .bar p{
+	width: 0%;
+	height: 0.101266rem;
+	background: #000;
+}
 .page{
 	display: none;
 	-webkit-transform: translateY(100%);
