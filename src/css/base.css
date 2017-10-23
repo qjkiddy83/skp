@@ -68,6 +68,14 @@
 	from { -webkit-transform: translateY(0);  }
 	to { -webkit-transform: translateY(-200%); }
 }
+@-webkit-keyframes PageOutDown {
+	from { -webkit-transform: translateY(0);  }
+	to { -webkit-transform: translateY(200%); }
+}
+@-webkit-keyframes PageOutDownTop {
+	from { -webkit-transform: translateY(-200%);  }
+	to { -webkit-transform: translateY(0); }
+}
 @-webkit-keyframes PageInLeft {
 	from {  }
 	to { -webkit-transform: translateX(0); }
@@ -177,6 +185,22 @@ header{
 	&.step6 .box1 .txt3,
 	&.step8 .box2 .txt1{
 		-webkit-animation: PageOut 0.5s forwards;
+	}
+	&.step1.down .box1,
+	&.step2.down .box1 .txt1,
+	&.step3.down .box1 .txt2,
+	&.step4.down .box2,
+	&.step5.down .box2 .txt1,
+	&.step6.down .box2 .txt2{
+		-webkit-animation: PageOutDown 0.5s forwards;
+	}
+	&.step3.down .box1 .txt1,
+	&.step4.down .box1 .txt2,
+	&.step5.down .box1,
+	&.step5.down .box1 .txt3,
+	&.step7.down .box2 .txt1,
+	&.step8.down .box2 .txt2{
+		-webkit-animation: PageOutDownTop 0.5s forwards;
 	}
 }
 .p3{
@@ -797,5 +821,17 @@ header{
 			top:6.78481rem;
 			-webkit-transform: scale3d(1, 1, 1);
 		}
+	}
+	&.step2.down .txt2 .t2,
+	&.step4.down .txt3 .t2,
+	&.step7.down .txt4 .t2,
+	&.step10.down .txt5 .t2{
+		-webkit-animation: PageOutDown 0.5s forwards;
+	}
+	&.step2.down .txt2 .t1,
+	&.step4.down .txt3 .t1,
+	&.step7.down .txt4 .t1,
+	&.step10.down .txt5 .t1{
+		-webkit-animation: PageOutDownTop 0.5s forwards;
 	}
 }
