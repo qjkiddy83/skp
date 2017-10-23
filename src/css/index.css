@@ -54,6 +54,23 @@ header{
 			}
 		}
 	}
+	&.down.step1{
+		.s2 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.075949rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeOutDown $dur forwards;
+			}
+			&:nth-child(2){
+				width:4.43038rem;
+				top: 2.291139rem;
+				left: 5.0rem;
+				animation: fadeOutUp $dur forwards;
+			}
+		}
+	}
 	&.step2{
 		.s2 img{
 			position: absolute;
@@ -68,6 +85,23 @@ header{
 				top: 2.291139rem;
 				left: 5.0rem;
 				animation: fadeInDown $dur forwards;
+			}
+		}
+	}
+	&.down.step2{
+		.s3 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.075949rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeOutUp $dur forwards;
+			}
+			&:nth-child(2){
+				width:4.43038rem;
+				top: 2.291139rem;
+				left: 5.0rem;
+				animation: fadeOutDown $dur forwards;
 			}
 		}
 	}
@@ -89,6 +123,23 @@ header{
 			}
 		}
 	}
+	&.down.step3{
+		.s4 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.43038rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeOutUp $dur forwards;
+			}
+			&:nth-child(2){
+				width:4.139241rem;
+				top: 2.151899rem;
+				left: 5.21519rem;
+				animation: fadeOutDown $dur forwards;
+			}
+		}
+	}
 	&.step4{
 		.s4 img{
 			position: absolute;
@@ -103,6 +154,26 @@ header{
 				top: 2.151899rem;
 				left: 5.21519rem;
 				animation: fadeInUp $dur forwards;
+			}
+		}
+	}
+
+	&.down.step4{
+		.s5 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.43038rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				transform: translateY(200%);
+				animation: fadeOutDown $dur forwards;
+			}
+			&:nth-child(2){
+				width:4.139241rem;
+				top: 2.151899rem;
+				left: 5.21519rem;
+				transform: translateY(-200%);
+				animation: fadeOutUp $dur forwards;
 			}
 		}
 	}
@@ -297,27 +368,39 @@ header{
 				left: 1.113924rem;
 				animation: fadeInRight $dur .5s forwards;
 			}
-		}
-	}
-	&.step1{
-		.s1 img{
-			position: absolute;
 			&:nth-child(2){
 				width:7.759494rem;
 				top: 8.139241rem;
 				left: 1.113924rem;
-				animation: fadeInUp $dur $gap*1+.5s forwards;
 			}
 		}
-	}
-	&.step2{
 		.s2 img{
 			position: absolute;
 			&:nth-child(1){
 				width:7.759494rem;
 				top: 8.139241rem;
 				left: 1.113924rem;
-				animation: fadeInUp $dur .5s forwards;
+			}
+		}
+	}
+	&.up{
+		&.step1{
+			.s1 img{
+				&:nth-child(2){
+					animation: fadeInUp $dur $gap*1+.5s forwards;
+				}
+			}
+		}
+		&.step2{
+			.s1 img{
+				&:nth-child(2){
+					animation: fadeOutUp $dur forwards;
+				}
+			}
+			.s2 img{
+				&:nth-child(1){
+					animation: fadeInUp $dur forwards;
+				}
 			}
 		}
 	}
@@ -325,14 +408,33 @@ header{
 		&.step1{
 			.s1 img{
 				&:nth-child(2){
-					animation: fadeInDown $dur .5s forwards;
+					animation: fadeInDown $dur forwards;
+				}
+			}
+			.s2 img{
+				&:nth-child(1){
+					animation: fadeOutDown $dur forwards;
 				}
 			}
 		}
 		&.step2{
 			.s2 img{
 				&:nth-child(1){
+					animation: fadeInDown $dur forwards;
+				}
+			}
+		}
+	}
+	&.down.init{
+		&.step1{
+			.s1 img{
+				&:nth-child(2){
 					animation: fadeInDown $dur $gap*1+.5s forwards;
+				}
+			}
+			.s2 img{
+				&:nth-child(1){
+					animation: none;
 				}
 			}
 		}
@@ -353,27 +455,39 @@ header{
 				left: 5.050633rem;
 				animation: fadeInRight $dur .5s forwards;
 			}
-		}
-	}
-	&.step3{
-		.s3 img{
-			position: absolute;
 			&:nth-child(1){
 				width:7.772152rem;
 				top: 2.151899rem;
 				left: 1.151899rem;
-				animation: fadeInUp $dur $gap*1+.5s forwards;
 			}
 		}
-	}
-	&.step4{
 		.s4 img{
 			position: absolute;
 			&:nth-child(1){
 				width:7.772152rem;
 				top: 2.151899rem;
 				left: 1.151899rem;
-				animation: fadeInUp $dur .5s forwards;
+			}
+		}
+	}
+	&.up{
+		&.step3{
+			.s3 img{
+				&:nth-child(1){
+					animation: fadeInUp $dur $gap*1+.5s forwards;
+				}
+			}
+		}
+		&.step4{
+			.s3 img{
+				&:nth-child(1){
+					animation: fadeOutUp $dur forwards;
+				}
+			}
+			.s4 img{
+				&:nth-child(1){
+					animation: fadeInUp $dur forwards;
+				}
 			}
 		}
 	}
@@ -381,14 +495,19 @@ header{
 		&.step3{
 			.s3 img{
 				&:nth-child(1){
-					animation: fadeInDown $dur .5s forwards;
+					animation: fadeInDown $dur forwards;
+				}
+			}
+			.s4 img{
+				&:nth-child(1){
+					animation: fadeOutDown $dur forwards;
 				}
 			}
 		}
 		&.step4{
 			.s4 img{
 				&:nth-child(1){
-					animation: fadeInDown $dur $gap*1+.5s forwards;
+					animation: fadeInDown $dur forwards;
 				}
 			}
 		}
@@ -409,27 +528,39 @@ header{
 				left: 5.050633rem;
 				animation: fadeInRight $dur .5s forwards;
 			}
-		}
-	}
-	&.step5{
-		.s5 img{
-			position: absolute;
 			&:nth-child(3){
 				width:7.860759rem;
 				top: 8.708861rem;
 				left: 1.101266rem;
-				animation: fadeInDown $dur $gap*1+.5s forwards;
 			}
 		}
-	}
-	&.step6{
 		.s6 img{
 			position: absolute;
 			&:nth-child(1){
 				width:7.860759rem;
 				top: 8.708861rem;
 				left: 1.101266rem;
-				animation: fadeInUp $dur .5s forwards;
+			}
+		}
+	}
+	&.up{
+		&.step5{
+			.s5 img{
+				&:nth-child(3){
+					animation: fadeInDown $dur $gap*1+.5s forwards;
+				}
+			}
+		}
+		&.step6{
+			.s5 img{
+				&:nth-child(3){
+					animation: fadeOutUp $dur forwards;
+				}
+			}
+			.s6 img{
+				&:nth-child(1){
+					animation: fadeInUp $dur forwards;
+				}
 			}
 		}
 	}
@@ -437,14 +568,12 @@ header{
 		&.step5{
 			.s5 img{
 				&:nth-child(3){
-					animation: fadeInDown $dur .5s forwards;
+					animation: fadeInDown $dur forwards;
 				}
 			}
-		}
-		&.step6{
 			.s6 img{
 				&:nth-child(1){
-					animation: fadeInDown $dur $gap*1+.5s forwards;
+					animation: fadeOutDown $dur forwards;
 				}
 			}
 		}
@@ -518,7 +647,7 @@ header{
 			}
 		}
 	}
-	&.step3{
+	&.up.step3{
 		.s3 img{
 			position: absolute;
 			&:nth-child(2){
@@ -529,18 +658,36 @@ header{
 			}
 		}
 	}
-	&.step4{
+	&.up.step4{
+		.s3 img{
+			position: absolute;
+			&:nth-child(2){
+				width:7.518987rem;
+				top: 2.64557rem;
+				left: 1.240506rem;
+				animation: fadeOutUp $dur forwards;
+			}
+		}
 		.s4 img{
 			position: absolute;
 			&:nth-child(1){
 				width:7.518987rem;
 				top: 2.64557rem;
 				left: 1.240506rem;
-				animation: fadeInUp $dur .5s forwards;
+				animation: fadeInUp $dur forwards;
 			}
 		}
 	}
-	&.step5{
+	&.up.step5{
+		.s4 img{
+			position: absolute;
+			&:nth-child(1){
+				width:7.518987rem;
+				top: 2.64557rem;
+				left: 1.240506rem;
+				animation: fadeOutUp $dur forwards;
+			}
+		}
 		.s5 img{
 			position: absolute;
 			&:nth-child(1){
@@ -554,22 +701,51 @@ header{
 	&.down{
 		&.step3{
 			.s3 img{
+				position: absolute;
 				&:nth-child(2){
-					animation: fadeInDown $dur $gap*1+.5s forwards;
+					width:7.518987rem;
+					top: 2.64557rem;
+					left: 1.240506rem;
+					animation: fadeInDown $dur forwards;
+				}
+			}
+			.s4 img{
+				position: absolute;
+				&:nth-child(1){
+					width:7.518987rem;
+					top: 2.64557rem;
+					left: 1.240506rem;
+					animation: fadeOutDown $dur forwards;
 				}
 			}
 		}
 		&.step4{
 			.s4 img{
+				position: absolute;
 				&:nth-child(1){
-					animation: fadeInDown $dur .5s forwards;
+					width:7.518987rem;
+					top: 2.64557rem;
+					left: 1.240506rem;
+					animation: fadeInDown $dur forwards;
+				}
+			}
+			.s5 img{
+				position: absolute;
+				&:nth-child(1){
+					width:7.518987rem;
+					top: 2.64557rem;
+					left: 1.240506rem;
+					animation: fadeOutDown $dur forwards;
 				}
 			}
 		}
 		&.step5{
 			.s5 img{
 				&:nth-child(1){
-					animation: fadeInDown $dur .5s forwards;
+					width:7.518987rem;
+					top: 2.64557rem;
+					left: 1.240506rem;
+					animation: fadeInDown $dur forwards;
 				}
 			}
 		}
@@ -692,7 +868,7 @@ header{
 			
 		}
 	}
-	&.step3{
+	&.up.step3{
 		.s3 img{
 			&:nth-child(2){
 				width:4.594937rem;
@@ -702,14 +878,54 @@ header{
 			}
 		}
 	}
-	&.step4{
+	&.down.step3{
+		.s3 img{
+			&:nth-child(2){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeInDown $dur forwards;
+			}
+		}
 		.s4 img{
 			position: absolute;
 			&:nth-child(1){
 				width:4.594937rem;
 				top: 2.139241rem;
 				left: 4.746835rem;
-				animation: fadeInUp $dur .5s forwards;
+				animation: fadeOutDown $dur forwards;
+			}
+			
+		}
+	}
+	&.up.step4{
+		.s3 img{
+			&:nth-child(2){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeOutUp $dur forwards;
+			}
+		}
+		.s4 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeInUp $dur forwards;
+			}
+			
+		}
+	}
+	&.down.step4{
+		.s4 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeInDown $dur $gap*1+0.5s forwards;
 			}
 			
 		}
@@ -727,7 +943,7 @@ header{
 			
 		}
 	}
-	&.step5{
+	&.up.step5{
 		.s5 img{
 			&:nth-child(2){
 				width:4.594937rem;
@@ -737,18 +953,60 @@ header{
 			}
 		}
 	}
-	&.step6{
+	&.down.step5{
+		.s5 img{
+			&:nth-child(2){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeInDown $dur forwards;
+			}
+		}
 		.s6 img{
 			position: absolute;
 			&:nth-child(1){
 				width:4.594937rem;
 				top: 2.139241rem;
 				left: 4.746835rem;
-				animation: fadeInUp $dur .5s forwards;
+				animation: fadeOutDown $dur forwards;
 			}
 			
 		}
 	}
+	&.up.step6{
+		.s5 img{
+			&:nth-child(2){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeOutUp $dur forwards;
+			}
+		}
+		.s6 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeInUp $dur forwards;
+			}
+			
+		}
+	}
+
+	&.down.step6{
+		.s6 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.594937rem;
+				top: 2.139241rem;
+				left: 4.746835rem;
+				animation: fadeInDown $dur $gap*1+0.5s forwards;
+			}
+		}
+	}
+
+
 	&.step7,&.step8,&.step9{
 		.s7 img{
 			position: absolute;
@@ -770,25 +1028,81 @@ header{
 			}
 		}
 	}
-	&.step8{
+	&.down.step7{
+		.s7 img{
+			&:nth-child(2){
+				width:8.025316rem;
+				top: 9.721519rem;
+				left: 0.987342rem;
+				animation: fadeInDown $dur forwards;
+			}
+		}
 		.s8 img{
 			position: absolute;
 			&:nth-child(1){
 				width:8.025316rem;
 				top: 9.721519rem;
 				left: 0.987342rem;
-				animation: fadeInUp $dur 0.5s forwards;
+				animation: fadeOutDown $dur forwards;
 			}
 		}
 	}
-	&.step9{
+	&.up.step8{
+		.s7 img{
+			&:nth-child(2){
+				width:8.025316rem;
+				top: 9.721519rem;
+				left: 0.987342rem;
+				animation: fadeOutUp $dur forwards;
+			}
+		}
+		.s8 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.025316rem;
+				top: 9.721519rem;
+				left: 0.987342rem;
+				animation: fadeInUp $dur forwards;
+			}
+		}
+	}
+	&.down.step8{
+		.s8 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.025316rem;
+				top: 9.721519rem;
+				left: 0.987342rem;
+				animation: fadeInDown $dur forwards;
+			}
+		}
 		.s9 img{
 			position: absolute;
 			&:nth-child(1){
 				width:8.025316rem;
 				top: 9.721519rem;
 				left: 0.987342rem;
-				animation: fadeInUp $dur 0.5s forwards;
+				animation: fadeOutDown $dur forwards;
+			}
+		}
+	}
+	&.up.step9{
+		.s8 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.025316rem;
+				top: 9.721519rem;
+				left: 0.987342rem;
+				animation: fadeOutUp $dur forwards;
+			}
+		}
+		.s9 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.025316rem;
+				top: 9.721519rem;
+				left: 0.987342rem;
+				animation: fadeInUp $dur forwards;
 			}
 		}
 	}
@@ -934,6 +1248,27 @@ header{
 			
 		}
 	}
+	&.down.step6{
+		.s6 img{
+			&:nth-child(3){
+				width:8.063291rem;
+				top: 7.177215rem;
+				left: 0.974684rem;
+				animation: fadeInDown $dur  forwards;
+			}
+			
+		}
+		.s7 img{
+			position: absolute;
+			&:nth-child(1){
+				width:8.063291rem;
+				top: 7.177215rem;
+				left: 0.974684rem;
+				animation: fadeOutDown $dur forwards;
+			}
+			
+		}
+	}
 	&.step7{
 		.s7 img{
 			position: absolute;
@@ -941,7 +1276,7 @@ header{
 				width:8.063291rem;
 				top: 7.177215rem;
 				left: 0.974684rem;
-				animation: fadeInUp $dur .5s forwards;
+				animation: fadeInUp $dur forwards;
 			}
 			
 		}
