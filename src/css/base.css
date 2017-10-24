@@ -188,8 +188,8 @@ header{
 	&.step1.down .box1,
 	&.step2.down .box1 .txt1,
 	&.step3.down .box1 .txt2,
-	&.step4.down .box2,
-	&.step5.down .box2 .txt1,
+	&.step4.down .box1 .txt3,
+	&.step5.down .box2,
 	&.step6.down .box2 .txt2{
 		-webkit-animation: PageOutDown 0.5s forwards;
 	}
