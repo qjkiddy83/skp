@@ -1,6 +1,7 @@
 ;
 (function() {
     var cacheList = [
+        [6000,"p0_title.gif"],
         [5261,"btn-replay.png"],
         [4883,"btn-share.png"],
         [11539,"end-address.png"],
@@ -205,7 +206,7 @@
             var p = parseInt(progress*100)+'%';
             $('#progress').width(p);
             $('#loading').remove();
-            $('.p1').find('.logo img').attr('src','http://skptrends.koikreative.com/image/p0_title.gif?'+new Date().getTime())
+            $('.p1').find('.logo img').attr('src',require('../images/p0_title.gif')+'?'+new Date().getTime());
         }else{
             var p = parseInt(progress*100)+'%';
             $('#progress').width(p);
