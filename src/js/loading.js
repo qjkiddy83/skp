@@ -205,6 +205,7 @@
             var p = parseInt(progress*100)+'%';
             $('#progress').width(p);
             $('#loading').remove();
+            $('.p1').find('.logo img').attr('src','http://skptrends.koikreative.com/image/p0_title.gif?'+new Date().getTime())
         }else{
             var p = parseInt(progress*100)+'%';
             $('#progress').width(p);
