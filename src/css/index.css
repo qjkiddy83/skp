@@ -61,17 +61,18 @@ header{
 				width:4.075949rem;
 				top: 2.151899rem;
 				left: 0.56962rem;
-				animation: fadeOutDown $dur forwards;
+				animation: fadeOutUp $dur forwards;
 			}
 			&:nth-child(2){
 				width:4.43038rem;
 				top: 2.291139rem;
 				left: 5.0rem;
-				animation: fadeOutUp $dur forwards;
+				animation: fadeOutDown $dur forwards;
 			}
 		}
 	}
-	&.step2{
+
+	&.up.step2{
 		.s2 img{
 			position: absolute;
 			&:nth-child(1){
@@ -89,6 +90,21 @@ header{
 		}
 	}
 	&.down.step2{
+		.s2 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.075949rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeInUp $dur forwards;
+			}
+			&:nth-child(2){
+				width:4.43038rem;
+				top: 2.291139rem;
+				left: 5.0rem;
+				animation: fadeInDown $dur forwards;
+			}
+		}
 		.s3 img{
 			position: absolute;
 			&:nth-child(1){
@@ -106,7 +122,22 @@ header{
 		}
 	}
 
-	&.step3{
+	&.up.step3{
+		.s2 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.075949rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeOutUp $dur forwards;
+			}
+			&:nth-child(2){
+				width:4.43038rem;
+				top: 2.291139rem;
+				left: 5.0rem;
+				animation: fadeOutDown $dur forwards;
+			}
+		}
 		.s3 img{
 			position: absolute;
 			&:nth-child(1){
@@ -124,6 +155,21 @@ header{
 		}
 	}
 	&.down.step3{
+		.s3 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.075949rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeInUp $dur 0.5s  forwards;
+			}
+			&:nth-child(2){
+				width:4.43038rem;
+				top: 2.291139rem;
+				left: 5.0rem;
+				animation: fadeInDown $dur  0.5s forwards;
+			}
+		}
 		.s4 img{
 			position: absolute;
 			&:nth-child(1){
@@ -140,45 +186,88 @@ header{
 			}
 		}
 	}
-	&.step4{
+
+	&.up.step4{
+		.s3 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.075949rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeOutUp $dur forwards;
+			}
+			&:nth-child(2){
+				width:4.43038rem;
+				top: 2.291139rem;
+				left: 5.0rem;
+				animation: fadeOutDown $dur forwards;
+			}
+		}
 		.s4 img{
 			position: absolute;
 			&:nth-child(1){
 				width:4.43038rem;
 				top: 2.151899rem;
 				left: 0.56962rem;
-				animation: fadeInDown $dur forwards;
+				animation: fadeInDown $dur 0.5s forwards;
 			}
 			&:nth-child(2){
 				width:4.139241rem;
 				top: 2.151899rem;
 				left: 5.21519rem;
-				animation: fadeInUp $dur forwards;
+				animation: fadeInUp $dur 0.5s forwards;
 			}
 		}
 	}
-
 	&.down.step4{
+		.s4 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.43038rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeInUp $dur forwards;
+			}
+			&:nth-child(2){
+				width:4.139241rem;
+				top: 2.151899rem;
+				left: 5.21519rem;
+				animation: fadeInDown $dur forwards;
+			}
+		}
 		.s5 img{
 			position: absolute;
 			&:nth-child(1){
 				width:4.43038rem;
 				top: 2.151899rem;
 				left: 0.56962rem;
-				transform: translateY(200%);
+				animation: fadeOutUp $dur forwards;
+			}
+			&:nth-child(2){
+				width:4.139241rem;
+				top: 2.151899rem;
+				left: 5.21519rem;
+				animation: fadeOutDown $dur forwards;
+			}
+		}
+	}
+
+	&.up.step5{
+		.s4 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.43038rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
 				animation: fadeOutDown $dur forwards;
 			}
 			&:nth-child(2){
 				width:4.139241rem;
 				top: 2.151899rem;
 				left: 5.21519rem;
-				transform: translateY(-200%);
 				animation: fadeOutUp $dur forwards;
 			}
 		}
-	}
-
-	&.step5{
 		.s5 img{
 			position: absolute;
 			&:nth-child(1){
@@ -194,6 +283,23 @@ header{
 				left: 5.21519rem;
 				transform: translateY(-200%);
 				animation: fadeInUp $dur forwards;
+			}
+		}
+	}
+	&.down.step5{
+		.s5 img{
+			position: absolute;
+			&:nth-child(1){
+				width:4.43038rem;
+				top: 2.151899rem;
+				left: 0.56962rem;
+				animation: fadeInUp $dur forwards;
+			}
+			&:nth-child(2){
+				width:4.139241rem;
+				top: 2.151899rem;
+				left: 5.21519rem;
+				animation: fadeInDown $dur forwards;
 			}
 		}
 	}

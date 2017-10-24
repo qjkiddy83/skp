@@ -1,17 +1,16 @@
 let $ = require('./zepto.min');
 $('.page,.wrapper,.end').on('swipeUp', function() {
+	let cur_step = $(this).data('step') || 1,
+		max_step = $(this).data('maxstep');
 	let next = $(this).next('.page,.wrapper,.end');
-	if(next.hasClass('page')){
-		$('header').show();
-	}else{
+	if(!next.hasClass('page')  && $(this).data('step') == $(this).data('maxstep')){
 		$('header').hide();
 		if(next.hasClass('end')){
 			next.find('.logo img').attr('src','http://skptrends.koikreative.com/image/p0_title.gif?'+new Date().getTime())
 		}
-		// http://skptrends.koikreative.com/image/p0_title.gif?1508674406362
+	}else{
+		$('header').show();
 	}
-	let cur_step = $(this).data('step') || 1,
-		max_step = $(this).data('maxstep');
 
 	if (cur_step < max_step) {
 		$(this).removeClass('down init step' + cur_step).data('step', ++cur_step).addClass('up step' + cur_step)
@@ -21,13 +20,14 @@ $('.page,.wrapper,.end').on('swipeUp', function() {
 		}
 		$(this).data('step', 1).removeClass("current up down init").removeClass('step' + cur_step).next('.page,.wrapper,.end').data('step', 1).addClass('current up init step1')
 	}
+
 }).on('swipeDown', function() {
-	if($(this).prev().hasClass('page')){
-		$('header').show();
-	}else{
-		$('header').hide();
-	}
 	let cur_step = $(this).data('step');
+	if($(this).prev().hasClass('p1') && $(this).data('step') == 1){
+		$('header').hide();
+	}else{
+		$('header').show();
+	}
 	if (cur_step > 1) {
 		$(this).removeClass('up init step' + cur_step).data('step', --cur_step).addClass('down step' + cur_step)
 	} else {
