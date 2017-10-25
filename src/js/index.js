@@ -22,7 +22,8 @@ $('.page,.wrapper,.end').on('swipeUp', function() {
 	}
 
 }).on('swipeDown', function() {
-	let cur_step = $(this).data('step');
+	let cur_step = $(this).data('step'),
+		prev_step = $(this).prev('.page,.wrapper,.end');
 	if($(this).prev().hasClass('p1') && $(this).data('step') == 1){
 		$('header').hide();
 	}else{
@@ -34,7 +35,8 @@ $('.page,.wrapper,.end').on('swipeUp', function() {
 		if (!$(this).prev('.page,.wrapper,.end').length) {
 			return false;
 		}
-		$(this).data('step', 1).removeClass("current up down init").removeClass('step' + cur_step).prev('.page,.wrapper,.end').data('step', 1).addClass('current down init step1')
+
+		$(this).data('step', 1).removeClass("current up down init").removeClass('step' + cur_step).prev('.page,.wrapper,.end').data('step', prev_step.data('maxstep')).addClass('current down init step'+prev_step.data('maxstep'))
 	}
 })
 

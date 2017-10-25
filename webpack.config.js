@@ -111,7 +111,7 @@ function getRules() {
             }]
         })
     }, {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|mp3)$/,
         use: [
           {
             loader: 'file-loader',
@@ -126,7 +126,7 @@ function getRules() {
         use: [{
             loader: 'html-loader',
             options: {
-              attrs: ['img:src',':data-source'],
+              attrs: ['img:src','audio:src',':data-source'],
               minimize: false
             }
         }]
