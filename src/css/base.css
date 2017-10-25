@@ -109,7 +109,7 @@ header{
 		position: absolute;
 		left:0.582278rem;
 		right:0.582278rem;
-		top:2.35443rem;
+		top:2.278481rem;
 		-webkit-transform: translateY(200%);
 	}
 	& .bg .txt{
@@ -145,16 +145,16 @@ header{
 	}
 	& .box{
 		position: absolute;
-		top:2.126582rem;
+		top:2.025316rem;
 		left:4.126582rem;
 		overflow: hidden;
 		-webkit-transform: translateY(200%);
-		width:5.291139rem;
+		width:5.063291rem;
 	}
 	& .box .txt{
 		position: absolute;
 		top:2.35443rem;
-		width:4.506329rem;
+		width:4.206329rem;
 		left:0.379747rem;
 		-webkit-transform: translateY(200%);
 	}
