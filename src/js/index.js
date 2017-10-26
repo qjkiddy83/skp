@@ -50,3 +50,12 @@ $('#btn-replay').tap(function(){
 	$('.page,.wrapper,.end').removeClass('current up down init').data('step',1);
 	$('.p1').addClass('current').find('.logo img').attr('src',require('../images/p0_title.gif')+'?'+new Date().getTime());
 })
+
+let audioPlayed = 0;
+$('audio').on('play',function(){
+	audioPlayed = 1;
+});
+$(document).one('touchstart',function(){
+	if(audioPlayed) return;
+	$('audio')[0].play();
+})

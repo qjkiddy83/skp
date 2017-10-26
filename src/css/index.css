@@ -354,11 +354,11 @@ header{
 		.s2{
 			position: absolute;
 			width: 10rem;
-			height: 14.101266rem;
+			height: 100%;
 			top: 1.632911rem;
 			left: 0;
 			background: url(../images/p10-bg.jpg) no-repeat;
-			background-size: 10.0rem 14.101266rem;
+			background-size: cover;
 		}
 	}
 	&.step2{
@@ -1539,7 +1539,7 @@ header{
 			width: 15.303797rem;
 			height: 100%;
 			left: 0;
-			background-size: 100% auto;
+			background-size: cover;
 			transition-property: left;
 			transition-duration: $dur;
 			img{
@@ -1737,14 +1737,14 @@ header{
 }
 
 @keyframes arrow {
-	0% { 
-		transform: translate3d(0,0,0);
+	from { 
+		transform: translateY(0);
 	}
 	50% {
-		transform: translate3d(0,-100%,0);
+		transform: translateY(-0.2rem);
 	}
-	100% { 
-		transform: translate3d(0,0,0);
+	to { 
+		transform: translateY(0);
 	}
 }
 .arrow{

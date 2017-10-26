@@ -3,7 +3,7 @@ var webpack = require('webpack'),
     fs = require('fs'),
     pkg = require('./package.json'),
     merge = require('merge'),
-    isDev = process.env.npm_lifecycle_event === "start",
+    isDev = process.env.npm_lifecycle_event === "dev",
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     _chunks = [],
@@ -77,7 +77,7 @@ function getExports() {
     if (isDev) {
         _exports = merge(_exports, {
             devServer: {
-                host: 'localhost',
+                host: '192.168.11.194',
                 port: 8080,
                 inline: true, //可以监控js变化
                 hot: true, //热启动
@@ -131,7 +131,7 @@ function getRules() {
             }
         }]
     }];
-    return isDev ? [cfg_eslint, ...rules] : rules;
+    return isDev ? [/*cfg_eslint, */...rules] : rules;
 }
 
 module.exports = getExports()
