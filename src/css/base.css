@@ -18,7 +18,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate3d(-50%, -50%, 0);
 	width: 2.278481rem;
 	height:2.278481rem;
 }
@@ -26,7 +26,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate3d(-50%, -50%, 0);
 	width: 1.56962rem;
 	height: 0.101266rem;
 	border: solid 0.025316rem #717171;
@@ -40,7 +40,7 @@
 }
 .page{
 	display: none;
-	transform: translateY(100%);
+	transform: translate3d(0, 100%, 0);
 	padding-top: 1.64557rem;
 }
 .page.current{
@@ -62,24 +62,32 @@
 	animation: PageOut 0.5s forwards;
 }
 @keyframes PageIn {
-	from {  }
-	to { transform: translateY(0); }
+	from { transform: translate3d(0, 100%, 0); opacity: 0; }
+	to { transform: translate3d(0, 0, 0); opacity: 1;}
+}
+@keyframes PageInTop {
+	from { transform: translate3d(0, -200%, 0); opacity: 0; }
+	to { transform: translate3d(0, 0, 0); opacity: 1;}
 }
 @keyframes PageOut {
-	from { transform: translateY(0);  }
-	to { transform: translateY(-200%); }
+	from { transform: translate3d(0, 0, 0);  }
+	to { transform: translate3d(0,-200%, 0); opacity: 0;}
 }
 @keyframes PageOutDown {
-	from { transform: translateY(0);  }
-	to { transform: translateY(200%); }
+	from { transform: translate3d(0, 0, 0);  }
+	to { transform: translate3d(0, 200%, 0); opacity: 0;}
 }
 @keyframes PageOutDownTop {
-	from { transform: translateY(-200%);  }
-	to { transform: translateY(0); }
+	from { transform: translate3d(0,-200%, 0);  }
+	to { transform: translate3d(0, 0, 0); opacity: 1;}
 }
 @keyframes PageInLeft {
-	from {  }
-	to { transform: translateX(0); }
+	from { transform: translate3d(-200%, 0, 0); opacity: 1; }
+	to { transform: translate3d(0, 0, 0); opacity: 1;}
+}
+@keyframes PageInRight {
+	from { transform: translate3d(200%, 0, 0); opacity: 1; }
+	to { transform: translate3d(0, 0, 0); opacity: 1;}
 }
 @keyframes FadeIn {
 	from {  }
@@ -104,35 +112,26 @@ header{
 		top:6.075949rem;
 		left:0.35443rem;
 		opacity: 0;
-		width:9.050633rem;
+		width:9.139241rem;
 		height:2.987342rem;
 	}
 	& .bg{
 		position: absolute;
 		left:0.582278rem;
 		right:0.582278rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 		top:2.278481rem;
 	}
 	& .bg .txt{
 		position: absolute;
 		top:0;
 		left:0;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	&.current .logo{
 		animation: p1logo 4s forwards;
-	}
-	@keyframes p1logo {
-		0% {  }
-		50%{
-			top:6.075949rem;
-			opacity: 1; 
-		}
-		100% { 
-			top:0.050633rem;
-			opacity: 1; 
-		}
 	}
 	&.current .bg{
 		animation: PageIn 1s 3s forwards;
@@ -141,9 +140,21 @@ header{
 		animation: PageIn 1s 4.5s forwards;
 	}
 }
+@keyframes p1logo {
+	0% {  }
+	50%{
+		top:6.075949rem;
+		opacity: 1; 
+	}
+	100% { 
+		top:0.050633rem;
+		opacity: 1; 
+	}
+}
 .p2 {
 	& .bg{
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 		height: 100%;
 	}
 	& .box{
@@ -151,7 +162,8 @@ header{
 		top:2.025316rem;
 		left:4.126582rem;
 		overflow: hidden;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 		width:5.063291rem;
 	}
 	& .box .txt{
@@ -159,7 +171,8 @@ header{
 		top:2.35443rem;
 		width:4.206329rem;
 		left:0.379747rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .box2 .txt{
 		top:3.417722rem;
@@ -207,7 +220,8 @@ header{
 }
 .p3{
 	& .bg{
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 		height: 100%;
 	}
 	& .box{
@@ -223,7 +237,8 @@ header{
 		top:4.810127rem;
 		width:7.113924rem;
 		left:0.734177rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	&.step1 .bg{
 		animation: PageIn 0.5s forwards;
@@ -237,7 +252,8 @@ header{
 }
 .p4{
 	& .bg{
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 		height: 100%;
 	}
 	& .txt1{
@@ -246,7 +262,8 @@ header{
 		right:0.987342rem;
 		width:4.822785rem;
 		height:6.43038rem;
-		transform: translateX(200%);
+		transform: translate3d(200%, 0, 0);
+		opacity: 0;
 	}
 	& .txt2{
 		position: absolute;
@@ -254,7 +271,8 @@ header{
 		right:1.037975rem;
 		width:4.531646rem;
 		height: 2.43038rem;
-		transform: translateX(200%);
+		transform: translate3d(200%, 0, 0);
+		opacity: 0;
 	}
 	& .pho{
 		position: absolute;
@@ -262,7 +280,8 @@ header{
 		left:0.582278rem;
 		width: 2.962025rem;
 		height: 8.037975rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .info{
 		position: absolute;
@@ -270,7 +289,8 @@ header{
 		left:0.582278rem;
 		width:3.126582rem;
 		height:2.898734rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .b{
 		position: absolute;
@@ -331,7 +351,7 @@ header{
 	}
 	&.step1 .txt1,
 	&.step1 .txt2{
-		animation: PageInLeft 0.5s 0.5s forwards;
+		animation: PageInRight 0.5s 0.5s forwards;
 	}
 	&.step1 .pho,
 	&.step1 .info{
@@ -351,7 +371,8 @@ header{
 		left:0.582278rem;
 		width:4.43038rem;
 		height:12.556962rem;
-		transform: translateX(-200%);
+		transform: translate3d(-200%, 0, 0);
+		opacity: 0;
 	}
 	& .txt{
 		position: absolute;
@@ -359,7 +380,8 @@ header{
 		right:0.582278rem;
 		width:4.139241rem;
 		height: 12.379747rem;
-		transform: translateX(200%);
+		transform: translate3d(200%, 0, 0);
+		opacity: 0;
 	}
 	& b{
 		position: absolute;
@@ -387,24 +409,21 @@ header{
 		left:0.0rem;
 		animation: p5moveleft 1.5s forwards;
 	}
-	@keyframes p5moveleft {
-		from{}
-		to{
-			left:-10.012658rem;
-		}
-	}
 	& .i5{
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	&.step1 .i1,
-	&.step1 .t1,
 	&.step2 .i2,
-	&.step2 .t1,
 	&.step3 .i3,
-	&.step3 .t2,
-	&.step4 .i4,
-	&.step4 .t2{
+	&.step4 .i4,{
 		animation: PageInLeft 0.5s forwards;
+	}
+	&.step1 .t1,
+	&.step2 .t1,
+	&.step3 .t2,
+	&.step4 .t2{
+		animation: PageInRight 0.5s forwards;
 	}
 	&.step5 b,
 	&.step6 b{
@@ -417,6 +436,12 @@ header{
 		display: block;
 	}
 }
+@keyframes p5moveleft {
+	from{}
+	to{
+		left:-10.012658rem;
+	}
+}
 .p6{
 	& .bg{
 		display: none;
@@ -425,7 +450,8 @@ header{
 		height: 12.556962rem;
 		top:2.202532rem;
 		left:0.607595rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .txt1{
 		position: absolute;
@@ -433,7 +459,8 @@ header{
 		height:2.493671rem;
 		top:9.64557rem;
 		left:2.886076rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .txt2{
 		position: absolute;
@@ -441,7 +468,8 @@ header{
 		left:1.367089rem;
 		width:7.189873rem;
 		height: 2.189873rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .img{
 		position: absolute;
@@ -449,7 +477,8 @@ header{
 		right:0.582278rem;
 		width:4.43038rem;
 		height:12.556962rem;
-		transform: translateX(200%);
+		transform: translate3d(200%, 0, 0);
+		opacity: 0;
 	}
 	& .txt{
 		position: absolute;
@@ -457,7 +486,8 @@ header{
 		left:0.759494rem;
 		width:4.139241rem;
 		height: 12.379747rem;
-		transform: translateX(-200%);
+		transform: translate3d(-200%, 0, 0);
+		opacity: 0;
 	}
 	& b{
 		position: absolute;
@@ -473,7 +503,8 @@ header{
 		height: 12.556962rem;
 		top:2.202532rem;
 		left:0.607595rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .pop{
 		display: none;
@@ -498,15 +529,17 @@ header{
 	&.step6 b{
 		display: none;
 	}
-	&.step2 .i1,
 	&.step2 .t1,
-	&.step3 .i2,
 	&.step3 .t1,
-	&.step4 .i3,
 	&.step4 .t2,
-	&.step5 .i4,
 	&.step5 .t2{
 		animation: PageInLeft 0.5s forwards;
+	}
+	&.step2 .i1,
+	&.step3 .i2,
+	&.step4 .i3,
+	&.step5 .i4{
+		animation: PageInRight 0.5s forwards;
 	}
 	&.step6 .pop{
 		display: block;
@@ -520,7 +553,8 @@ header{
 		height: 13.341772rem;
 		top:1.873418rem;
 		left:1.341772rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .txt1{
 		position: absolute;
@@ -528,7 +562,8 @@ header{
 		height:3.392405rem;
 		top:8.405063rem;
 		left:2.886076rem;
-		transform: translateY(300%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .txt2{
 		position: absolute;
@@ -536,7 +571,8 @@ header{
 		left:2.0rem;
 		width:5.797468rem;
 		height: 1.974684rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .i2{
 		position: absolute;
@@ -544,7 +580,8 @@ header{
 		left:1.392405rem;
 		width:7.113924rem;
 		height: 6.797468rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .t2{
 		position: absolute;
@@ -552,7 +589,8 @@ header{
 		left:1.392405rem;
 		width:7.202532rem;
 		height: 4.911392rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .i3{
 		position: absolute;
@@ -560,7 +598,8 @@ header{
 		left:1.392405rem;
 		width:7.113924rem;
 		height: 7.772152rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .t3{
 		position: absolute;
@@ -568,7 +607,8 @@ header{
 		left:1.392405rem;
 		width:7.202532rem;
 		height: 3.392405rem;
-		transform: translateY(2000%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .i4{
 		position: absolute;
@@ -576,7 +616,8 @@ header{
 		left:1.392405rem;
 		width:7.113924rem;
 		height: 7.772152rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .t4{
 		position: absolute;
@@ -584,7 +625,8 @@ header{
 		left:1.392405rem;
 		width:7.202532rem;
 		height: 3.379747rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	&.step1 .bg{
 		display: block;
@@ -608,7 +650,8 @@ header{
 		height:8.050633rem;
 		top:6.759494rem;
 		left:0;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .txt{
 		position: absolute;
@@ -616,7 +659,8 @@ header{
 		height:4.151899rem;
 		top:2.278481rem;
 		left:0.556962rem;
-		transform: translateY(2000%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .pop{
 		display: none;
@@ -634,7 +678,8 @@ header{
 		height:7.063291rem;
 		top:1.64557rem;
 		left:0;
-		transform: translateY(-200%);
+		transform: translate3d(0,-200%, 0);
+		opacity: 0;
 	}
 	& .i2{
 		position: absolute;
@@ -642,7 +687,8 @@ header{
 		height:5.506329rem;
 		top:8.987342rem;
 		left:0.582278rem;
-		transform: translateX(-200%);
+		transform: translate3d(-200%, 0, 0);
+		opacity: 0;
 	}
 	& .txt2{
 		position: absolute;
@@ -650,7 +696,8 @@ header{
 		height:4.886076rem;
 		top:9.21519rem;
 		left:5.063291rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 		overflow: hidden;
 	}
 	& .txt2 img{
@@ -659,11 +706,13 @@ header{
 		top:0rem;
 	}
 	& .txt2 .t2{
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .bg3{
 		width: 10.0rem;
-		transform: translateY(-200%);
+		transform: translate3d(0,-200%, 0);
+		opacity: 0;
 	}
 	& .pop3{
 		display: none;
@@ -692,15 +741,18 @@ header{
 		left:0.506329rem;
 	}
 	& .txt3 .t2{
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .bg4,
 	& .bg5{
 		position: absolute;
 		top:5.063291rem;
+		left: 0;
 		width:10.0rem;
 		height: 6.151899rem;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .pop4,
 	& .pop5{
@@ -723,7 +775,8 @@ header{
 		right:0.556962rem;
 		width: 3.658228rem;
 		height: 5.506329rem;
-		transform: translateX(200%);
+		transform: translate3d(200%, 0, 0);
+		opacity: 0;
 	}
 	& .txt4,
 	& .txt5{
@@ -734,7 +787,8 @@ header{
 		top:9.037975rem;
 		left:0.78481rem;
 		overflow: hidden;
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	& .txt4 img,
 	& .txt5 img{
@@ -743,7 +797,8 @@ header{
 	}
 	& .txt4 .t2,
 	& .txt5 .t2{
-		transform: translateY(200%);
+		transform: translate3d(0, 200%, 0);
+		opacity: 0;
 	}
 	&.step1 .pop,
 	&.step4 .pop3,
@@ -758,13 +813,9 @@ header{
 	}
 	&.step1 .bg1,
 	&.step1 .txt,
-	&.step2 .bg2,
 	&.step2 .txt2,
-	&.step3 .bg2,
 	&.step3 .txt2,
 	&.step3 .txt2 .t2,
-	&.step4 .bg3,
-	&.step5 .bg3,
 	&.step5 .txt3 .t2,
 	&.step6 .bg4,
 	&.step7 .txt4,
@@ -776,6 +827,12 @@ header{
 	&.step11 .txt5 .t2{
 		animation: PageIn 0.5s forwards;
 	}
+	&.step2 .bg2,
+	&.step3 .bg2,
+	&.step4 .bg3,
+	&.step5 .bg3{
+		animation: PageInTop 0.5s forwards;
+	}
 	&.step3 .txt2 .t1,
 	&.step5 .txt3 .t1,
 	&.step8 .txt4 .t1,
@@ -783,12 +840,14 @@ header{
 		animation: PageOut 0.5s forwards;
 	}
 	&.step2 .i2,
-	&.step3 .i2,
+	&.step3 .i2{
+		animation: PageInLeft 0.5s forwards;
+	}
 	&.step7 .i4,
 	&.step8 .i4,
 	&.step10 .i5,
 	&.step11 .i5{
-		animation: PageInLeft 0.5s forwards;
+		animation: PageInRight 0.5s forwards;
 	}
 	&.step4 .txt3,
 	&.step5 .txt3{
@@ -800,32 +859,14 @@ header{
 	&.step11 .bg5{
 		animation: p8top 0.5s forwards;
 	}
-	@keyframes p8top {
-		from{
-			transform: translateY(0%);
-			top:5.063291rem;
-		}
-		to{
-			transform: translateY(0%);
-			top:1.64557rem;
-		}
-	}
+	
 	&.step7 .pop4,
 	&.step8 .pop4,
 	&.step10 .pop5,
 	&.step11 .pop5{
 		animation: p8pop 0.5s forwards;
 	}
-	@keyframes p8pop {
-		from{
-			top:10.278481rem;
-			transform: scale3d(1, 1, 1);
-		}
-		to{
-			top:6.78481rem;
-			transform: scale3d(1, 1, 1);
-		}
-	}
+	
 	&.step2.down .txt2 .t2,
 	&.step4.down .txt3 .t2,
 	&.step7.down .txt4 .t2,
@@ -837,5 +878,27 @@ header{
 	&.step7.down .txt4 .t1,
 	&.step10.down .txt5 .t1{
 		animation: PageOutDownTop 0.5s forwards;
+	}
+}
+@keyframes p8top {
+	from{
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+		top:5.063291rem;
+	}
+	to{
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+		top:1.64557rem;
+	}
+}
+@keyframes p8pop {
+	from{
+		top:10.278481rem;
+		transform: scale3d(1, 1, 1);
+	}
+	to{
+		top:6.78481rem;
+		transform: scale3d(1, 1, 1);
 	}
 }
