@@ -77,7 +77,7 @@ function getExports() {
     if (isDev) {
         _exports = merge(_exports, {
             devServer: {
-                host: '192.168.11.194',
+                host: 'localhost',//'192.168.11.194',
                 port: 8080,
                 inline: true, //可以监控js变化
                 hot: true, //热启动
