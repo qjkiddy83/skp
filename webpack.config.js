@@ -33,7 +33,7 @@ var webpack = require('webpack'),
         // }),
         new ExtractTextPlugin({ filename: 'css/[name].css' }),
         new ImageminPlugin({
-          disable: process.env.NODE_ENV !== 'production', 
+          disable: true, 
           pngquant: {
             quality: '95-100'
           }
