@@ -1,7 +1,7 @@
 ﻿$.ajax({
     url:"http://g.koikreative.com/lookbook/js/sample.php?url=" + window.escape(window.location.href),
     dataType:'jsonp',
-    success: function () {
+    complete: function () {
         var jsApiList = ['checkJsApi',
             'onMenuShareTimeline',
             'onMenuShareAppMessage',
@@ -23,7 +23,7 @@
                 return s;
             },
             desc: '为您献上最专业的时尚潮流，提供最流行的时尚精选',
-            link: 'http://skptrend17.koikreative.com/',
+            link: 'http://skptrend17.koikreative.com/index.html',
             imgUrl: 'http://skptrend17.koikreative.com/images/share.png'
         };
 
