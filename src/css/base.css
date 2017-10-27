@@ -214,6 +214,7 @@ header{
 	}
 	&.step1.down .box1 .txt1,
 	&.step2.down .box1 .txt2,
+	&.step3.down .box1,
 	&.step3.down .box1 .txt3,
 	&.step4.down .box2 .txt1{
 		animation: PageOutDownTop 0.5s forwards;
