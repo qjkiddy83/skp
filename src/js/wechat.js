@@ -22,7 +22,7 @@
                 var s = "北京SKP 2018春夏潮流解析"
                 return s;
             },
-            desc: '为您献上最专业的时尚潮流，提供最流行的时尚精选',
+            desc: '为您献上更专业的时尚潮流，提供最流行的时尚精选',
             link: 'http://skptrend17.koikreative.com/index.html',
             imgUrl: 'http://skptrend17.koikreative.com/images/share.png'
         };

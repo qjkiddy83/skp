@@ -5,10 +5,10 @@ $('.page,.wrapper,.end').on('swipeUp', function() {
 	let next = $(this).next('.page,.wrapper,.end');
 	if(!next.hasClass('page')  && $(this).data('step') == $(this).data('maxstep')){
 		$('header').hide();
+		$('.arrow').hide();
 		if(next.hasClass('end')){
 			next.find('.logo img').attr('src','http://skptrends.koikreative.com/image/p0_title.gif?'+new Date().getTime())
 		}
-		$('.arrow').hide();
 	}else{
 		$('header').show();
 		$('.arrow').show();
@@ -28,8 +28,10 @@ $('.page,.wrapper,.end').on('swipeUp', function() {
 		prev_step = $(this).prev('.page,.wrapper,.end');
 	if(($(this).prev().hasClass('p1') && $(this).data('step') == 1)||$(this).hasClass('wrapper')){
 		$('header').hide();
+		//$('.arrow').hide();
 	}else{
 		$('header').show();
+		$('.arrow').show();
 	}
 	if (cur_step > 1) {
 		$(this).removeClass('up init step' + cur_step).data('step', --cur_step).addClass('down step' + cur_step)
