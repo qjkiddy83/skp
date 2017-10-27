@@ -24,7 +24,7 @@ $('.page,.wrapper,.end').on('swipeUp', function() {
 }).on('swipeDown', function() {
 	let cur_step = $(this).data('step'),
 		prev_step = $(this).prev('.page,.wrapper,.end');
-	if($(this).prev().hasClass('p1') && $(this).data('step') == 1){
+	if(($(this).prev().hasClass('p1') && $(this).data('step') == 1)||$(this).hasClass('wrapper')){
 		$('header').hide();
 	}else{
 		$('header').show();
