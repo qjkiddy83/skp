@@ -8,8 +8,10 @@ $('.page,.wrapper,.end').on('swipeUp', function() {
 		if(next.hasClass('end')){
 			next.find('.logo img').attr('src','http://skptrends.koikreative.com/image/p0_title.gif?'+new Date().getTime())
 		}
+		$('.arrow').hide();
 	}else{
 		$('header').show();
+		$('.arrow').show();
 	}
 
 	if (cur_step < max_step) {

@@ -166,6 +166,10 @@ header{
 		opacity: 0;
 		width:5.063291rem;
 	}
+	& .box1{
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
 	& .box .txt{
 		position: absolute;
 		top:2.35443rem;
@@ -174,47 +178,44 @@ header{
 		transform: translate3d(0, 200%, 0);
 		opacity: 0;
 	}
+	& .box1 .txt1{
+		transform: translate3d(0, 0, 0);
+	}
 	& .box2 .txt{
 		top:3.417722rem;
 	}
 	&[class*="step"] .bg{
 		animation: PageIn 0.5s forwards;
 	}
-	&.step2 .box1,
-	&.step3 .box1,
-	&.step3 .box1 .txt1,
-	&.step4 .box1,
-	&.step4 .box1 .txt2,
-	&.step5 .box1,
-	&.step5 .box1 .txt3,
-	&.step6 .box2,
-	&.step7 .box2,
-	&.step7 .box2 .txt1,
-	&.step8 .box2,
-	&.step8 .box2 .txt2{
+	&.step1 .box1 .txt1{
+		opacity: 1;
+	}
+	&.step4 .box2 .txt1{
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+	&.step2 .box1 .txt2,
+	&.step3 .box1 .txt3,
+	&.step4 .box2,
+	&.step5 .box2,
+	&.step5 .box2 .txt2{
 		animation: PageIn 0.5s forwards;
 	}
-	&.step4 .box1 .txt1,
-	&.step5 .box1 .txt2,
-	&.step6 .box1,
-	&.step6 .box1 .txt3,
-	&.step8 .box2 .txt1{
+	&.step2 .box1 .txt1,
+	&.step3 .box1 .txt2,
+	&.step4 .box1,
+	&.step5 .box2 .txt1{
 		animation: PageOut 0.5s forwards;
 	}
-	&.step1.down .box1,
-	&.step2.down .box1 .txt1,
-	&.step3.down .box1 .txt2,
-	&.step4.down .box1 .txt3,
-	&.step5.down .box2,
-	&.step6.down .box2 .txt2{
+	&.step1.down .box1 .txt2,
+	&.step2.down .box1 .txt3,
+	&.step4.down .box2 .txt2{
 		animation: PageOutDown 0.5s forwards;
 	}
-	&.step3.down .box1 .txt1,
-	&.step4.down .box1 .txt2,
-	&.step5.down .box1,
-	&.step5.down .box1 .txt3,
-	&.step7.down .box2 .txt1,
-	&.step8.down .box2 .txt2{
+	&.step1.down .box1 .txt1,
+	&.step2.down .box1 .txt2,
+	&.step3.down .box1 .txt3,
+	&.step4.down .box2 .txt1{
 		animation: PageOutDownTop 0.5s forwards;
 	}
 }

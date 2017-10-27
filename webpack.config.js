@@ -5,6 +5,7 @@ var webpack = require('webpack'),
     merge = require('merge'),
     isDev = process.env.npm_lifecycle_event === "dev",
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    ImageminPlugin = require('imagemin-webpack-plugin').default,
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     _chunks = [],
     oConfig = getOEntry(),
@@ -31,6 +32,12 @@ var webpack = require('webpack'),
         //     minChunks: Infinity // 提取至少2个模块共有的部分
         // }),
         new ExtractTextPlugin({ filename: 'css/[name].css' }),
+        new ImageminPlugin({
+          disable: process.env.NODE_ENV !== 'production', 
+          pngquant: {
+            quality: '95-100'
+          }
+        })
     ];
 
 //生成入口对象
