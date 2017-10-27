@@ -205,7 +205,7 @@
         if(progress >0.99){
             var p = parseInt(progress*100)+'%';
             $('#progress').width(p);
-            $('#loading').remove();
+            //$('#loading').remove();
             $('.p1').find('.logo img').attr('src',require('../images/p0_title.gif')+'?'+new Date().getTime());
         }else{
             var p = parseInt(progress*100)+'%';
