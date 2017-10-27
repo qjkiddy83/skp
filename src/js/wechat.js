@@ -19,7 +19,7 @@
         wx.config(data);
         var wxConfig = {
             title: function() {
-                var s = "北京SKP TRENDS春夏时装精选"
+                var s = "北京SKP 2018春夏潮流解析"
                 return s;
             },
             desc: '为您献上最专业的时尚潮流，提供最流行的时尚精选',
